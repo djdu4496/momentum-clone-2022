@@ -5,37 +5,100 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Momentum App</title>
+  <title>Pomodoro</title>
 </head>
 <body>
-  <form class="login-form hidden" >
-    <input 
-      required
-      maxlength="15"
-      type="text" 
-      placeholder="What is your name?" 
-    />
-    <button>Log in</button>
-  </form>
-  <h1 id="greeting" class="hidden"></h1>
-  <h2 id="clock">00:00:00</h2>
-  <div id="quote">
-    <span></span>
-    <span></span>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li class="clock">00:00</li>
+          <li class="date">00월 00일</li>
+        </ul>
+        <ul>
+          <a href="https://github.com/djdu4496">
+            <li class="icon-container">
+              <div class="icon">
+                <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-github-1.png" alt="">
+              </div>
+              <span>github</span>
+            </li>
+          </a>
+          <a href="https://google.com">
+            <li class="icon-container">
+              <div class="icon">
+                <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="">
+              </div>
+              <span>chrome</span>
+            </li>
+          </a>
+          <a href="https://nomadcoders.co">
+            <li class="icon-container">
+              <div class="icon">
+                <img src="https://nomadcoders.co/m.svg" alt="">
+              </div>
+              <span>nomadcoders</span>
+            </li>
+          </a>
+          <a href="https://youtube.com">
+            <li class="icon-container">
+              <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/YouTube_social_white_circle_%282017%29.svg/240px-YouTube_social_white_circle_%282017%29.svg.png" alt="">
+              </div>
+              <span>youtube</span>
+            </li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <div class="widget">
+      <div id="weather" class="widget-wrapper">
+        <span class="weather__city"></span>
+        <span class="weather__icon hidden"><i class="fa-solid fa-location-arrow"></i></span>
+        <span class="weather__temperature"></span>
+        <img src="#" alt="">
+        <span></span>
+        <span></span>
+      </div>
+      <div id="plan"class="widget-wrapper">
+        <span></span>
+        <span></span>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
+      <div id="paint-todo">
+        <h1>ToDoList </h1>
+        <ul id="todo-list"></ul>
+      </div>
+      <div id="quote-screen">
+        <ul id="quote">
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="forms">
+      <form id="login-form">
+        <h1>Hello, What's your name?</h1>
+        <input 
+          required
+          maxlength="15"
+          type="text" 
+        />
+      </form>
+      <form id="todo-form" class="hidden">
+        <h1>What is your main focus for today?</h1>
+        <input type="text" required />
+      </form>
+    </div>
   </div>
-  <form id="todo-form">
-    <input type="text" placeholder="Write a To Do and Press Enter" required />
-  </form>
-  <ul id="todo-list"></ul>
-  <div id="weather">
-    <span></span>
-    <span></span>
-  </div>
+
   <script src="js/greetings.js"></script>
   <script src="js/clock.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/background.js"></script>
   <script src="js/todo.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="https://kit.fontawesome.com/4980cb94b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

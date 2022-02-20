@@ -1,11 +1,11 @@
-const clock = document.querySelector('h2#clock');
+const body = document.body;
+const clock = body.querySelector('header nav ul .clock');
 
 function getTime() {
   const date = new Date();
   const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`; 
   const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`;
-  const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`;
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  clock.innerText = `${hours}:${minutes}`;
 }
 
 getTime();

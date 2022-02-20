@@ -1,0 +1,225 @@
+.widget {
+  gap: 20px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  justify-items: start;
+}
+
+.widget-wrapper {
+  display: flex;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+  width: 170px;
+  height: 170px;
+  border-radius: 32px;
+  padding: 20px;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#weather > span:first-child {
+  display: inline-block;
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+#weather > span:nth-child(3) {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+#weather > img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+#weather > span:nth-child(5) {
+  margin-bottom: 3px;
+}
+
+#weather > span:nth-child(5),
+#weather > span:last-child {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#plan {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#plan {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+#plan > span:nth-child(2) {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+#paint-todo {
+  align-self: center;
+  display: flex;
+  width: 100%;
+  height: 340px;
+  border-radius: 32px;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  background: linear-gradient(to top, #fac012, #ffdd4c);
+}
+
+#paint-todo > h1 {
+  width: 100%;
+  padding: 20px;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+#paint-todo > ul {
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  background-color: rgb(22, 22, 22);
+  padding: 20px;
+}
+
+.todo-button {
+  border: none;
+  background-color: #ffdd4c;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.todo-button:hover {
+  background-color: white;
+}
+
+#greeting {
+  font-family: "Sriracha", cursive;
+  color: white;
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .widget {
+    gap: 15px;
+  }
+  .widget-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 32px;
+    padding: 20px;
+  }
+
+  #greeting {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  #weather > span:first-child {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  #weather > span:nth-child(3) {
+    font-size: 35px;
+    font-weight: 200;
+  }
+
+  #weather > img {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  #weather > span:nth-child(5) {
+    margin-bottom: 3px;
+  }
+
+  #weather > span:nth-child(5),
+  #weather > span:last-child {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  #paint-todo > h1 {
+    font-size: 20px;
+    letter-spacing: 2.5px;
+  }
+
+  #paint-todo > ul > li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .widget {
+    gap: 10px;
+  }
+  .widget-wrapper {
+    width: 125px;
+    height: 125px;
+    border-radius: 32px;
+    padding: 18px;
+  }
+
+  #greeting {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  #weather > span:first-child {
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  #weather > span:nth-child(3) {
+    font-size: 25px;
+    font-weight: 200;
+  }
+
+  #weather > img {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+
+  #weather > span:nth-child(5) {
+    margin-bottom: 3px;
+  }
+
+  #weather > span:nth-child(5),
+  #weather > span:last-child {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  #plan > span:first-child {
+    font-size: 15px;
+  }
+  #paint-todo > h1 {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+  #paint-todo > ul > li {
+    font-size: 13px;
+  }
+}

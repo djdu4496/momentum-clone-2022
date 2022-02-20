@@ -25,6 +25,7 @@ function paintToDo(newToDo){
   const button = document.createElement('button');
   button.innerHTML = '&times;';
   button.addEventListener('click', deleteToDo)
+  button.classList.add('todo-button');
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
