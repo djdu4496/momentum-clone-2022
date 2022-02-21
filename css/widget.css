@@ -98,6 +98,19 @@
   padding: 20px;
 }
 
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#todo-list > li {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
 .todo-button {
   border: none;
   background-color: #ffdd4c;
